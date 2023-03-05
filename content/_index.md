@@ -1,6 +1,7 @@
 ---
 title: Home
 menu: main
+weight: 1
 ---
 
 <section class="index-header">
