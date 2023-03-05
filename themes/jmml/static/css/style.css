@@ -325,7 +325,7 @@ blockquote {
   margin-right: 0;
   margin-left: 0;
   padding: 0.4rem 0.8rem;
-  border-left: 0.1rem solid black;
+  border-left: 0.1rem solid var(--foreground);
 }
 
 blockquote p {
