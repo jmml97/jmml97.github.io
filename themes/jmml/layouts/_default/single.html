@@ -1,0 +1,37 @@
+{{ define "main" }}
+<main>
+  <article>
+    <h2>
+      {{ .Title | markdownify }}
+    </h2>
+    {{ if eq .Type "posts" }}
+    <time datetime='{{ .Date.Format "2006-01-02" | safeHTML }}'>
+      {{.Date.Format "2006-01-02"}} — {{ .ReadingTime }} {{ if gt .ReadingTime 1 }}minutes{{ else }}minute{{ end }} read
+    </time>
+    {{ end }}
+    <div>
+      {{ .Content }}
+    </div>
+    {{ with .Params.tags }}
+    <div>
+      <ul id="tags">
+        {{ range . }}
+        <li><a href="{{ " /tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+    {{ end }}
+    {{ with .Site.DisqusShortname }}
+    <div>
+      {{ template "_internal/disqus.html" . }}
+    </div>
+    {{ end }}
+  </article>
+  <div class="navigation">
+    {{ if eq .Type "posts" }}
+    <p><a class="btn" href="/posts/">🡨 Go back</a></p>
+    {{ end }}
+    <p><a class="btn" href="#top">Go to the top 🡩</a></p>
+  </div>
+</main>
+{{ end }}

@@ -1,0 +1,686 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-Bold.woff2') format('woff2'),
+    url('../fonts/JetBrainsMono-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Bold.woff2') format('woff2'),
+    url('../fonts/Inter-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Italic.woff2') format('woff2'),
+    url('../fonts/Inter-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-BoldItalic.woff2') format('woff2'),
+    url('../fonts/JetBrainsMono-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-BoldItalic.woff2') format('woff2'),
+    url('../fonts/Inter-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.woff2') format('woff2'),
+    url('../fonts/Inter-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-Medium.woff2') format('woff2'),
+    url('../fonts/JetBrainsMono-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('../fonts/JetBrainsMono-MediumItalic.woff2') format('woff2'),
+    url('../fonts/JetBrainsMono-MediumItalic.woff') format('woff');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+/* Color variables for light and dark */
+
+html {
+  --background: #fafafa;
+  --foreground: #1c1c1c;
+  --lighter: #444444;
+  --links: #00449e;
+  /* --visited: slateblue; */
+  --visited: var(--links);
+  --shadow: #ddd;
+  --darker-shadow: #bbb;
+  --border: #bfbfbf;
+  --dotted: #ddd;
+  --feature: #137752;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    --background: #1c1c1c;
+    --foreground: #fafafa;
+    --lighter: #cecece;
+    --links: #00acec;
+    /* --visited: #7d6de6; */
+    --visited: var(--links);
+    --shadow: #242424;
+      --darker-shadow: #6c6c6c;
+    --border: #3b3b3b;
+    --dotted: #ddd;
+    --feature: #32a457;
+  }
+}
+
+/* Main colors */
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+body {
+  /* System font stack */
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  font-size: 18px;
+
+  /* Position content on screen and setup font size */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px;
+}
+
+body {
+  padding-top: 3em;
+}
+
+body p {
+  line-height: 36px;
+}
+
+/* Adjust padding and font size on mobile */
+@media (max-width: 840px) {
+  body {
+    padding-right: 20px;
+    padding-left: 20px;
+
+    font-size: 20px;
+  }
+}
+
+/* Header */
+
+header {
+  /* margin-top: 3em; */
+  margin-bottom: 3em;
+  padding-bottom: 1em;
+
+  display: grid;
+  grid-template-columns: fit-content(500px) 1fr;
+  align-items: center;
+
+  border-color: var(--dotted);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+}
+
+@media (max-width: 600px) {
+  header {
+    grid-template-columns: 100%;
+    grid-row-gap: 1em;
+  }
+}
+
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+header h1 a {
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+header h1 a:visited {
+  color: var(--foreground);
+}
+
+header h1 a:hover {
+  text-decoration: underline;
+}
+
+header nav {
+  justify-self: end;
+}
+
+@media (max-width: 600px) {
+  header nav {
+    justify-self: start;
+  }
+}
+
+
+header nav p {
+  margin: 0;
+}
+
+.index-header h1 {
+  font-size: 2em;
+}
+
+/* Links */
+
+a {
+  color: var(--links);
+}
+
+a:visited {
+  color: var(--visited);
+}
+
+/* Headings */
+
+h1 {
+  font-weight: bold;
+}
+
+h3 {
+  padding-top: 1em;
+}
+
+h3+p {
+  margin-top: -0.5em;
+}
+
+/* hr */
+
+hr {
+  overflow: visible;
+  height: 1px;
+  margin: 2em 0 2em;
+  border: none;
+  border-top: 2px dotted var(--dotted);
+}
+
+/* Project list styling */
+
+.links-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.links-list li {
+  display: inline;
+  margin-right: 1em;
+}
+
+.projects {
+  padding-top: 2em;
+}
+
+.project-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Recent posts list styling */
+
+.posts-list {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-gap: 1em;
+  row-gap: 0em;
+}
+
+@media (max-width: 600px) {
+  .posts-list {
+    grid-template-columns: 33% auto;
+    row-gap: 0.5em;
+  }
+}
+
+.posts-list p {
+  margin: 0;
+}
+
+/* Articles */
+
+article time {
+  display: block;
+  margin-top: -1em;
+}
+
+/* Navigation */
+
+.navigation {
+  display: grid;
+  grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+}
+
+.navigation p:first {
+  justify-self: start;
+}
+
+.navigation p:last-child {
+  justify-self: end;
+}
+
+/* Buttons */
+
+.btn {
+  position: relative;
+  top: -2px;
+  display: inline-block;
+  height: 2rem;
+  padding: 0rem 0.4rem 0.2rem 0.4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-decoration: none;
+  color: var(--foreground);
+  border: 0.08333rem solid var(--foreground);
+  border-radius: 0;
+  outline: none;
+  background: var(--background);
+  box-shadow: 2px 2px var(--darker-shadow);
+  -webkit-appearance: none;
+  appearance: none;
+  fill: var(--foreground);
+}
+
+.btn,
+.btn:visited {
+  color: var(--foreground);
+  transition: all 0.2s linear;
+}
+
+.btn:hover {
+  background: var(--foreground);
+  color: var(--background);
+  transition: all 0.2s linear;
+}
+
+/* Images and figures */
+
+img {
+  width: 100%;
+}
+
+.img-card {
+  display: block;
+  height: auto;
+  border: 1px solid var(--border);
+  box-shadow: 2px 2px var(--shadow);
+}
+
+figure {
+  margin: 0.4em 0;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+}
+
+figcaption {
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+/* Tables */
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: left;
+  border: 0.08333rem solid var(--border);
+  border-top: 2px dotted var(--dotted);
+  border-left: 4px solid var(--feature);
+  background: var(--background);
+  box-shadow: 2px 2px var(--shadow);
+  width: 100%;
+}
+
+table th {
+  font-weight: bold;
+  padding: 0.3rem;
+  border-bottom: 0.08333rem solid var(--foreground);
+}
+
+table td {
+  overflow: hidden;
+  padding: 0.3rem;
+  text-overflow: ellipsis;
+  border: 0.08333rem solid var(--border);
+}
+
+.chroma table td {
+  border: none;
+}
+
+/* Blockquotes */
+
+blockquote {
+  margin-right: 0;
+  margin-left: 0;
+  padding: 0.4rem 0.8rem;
+  border-left: 0.1rem solid var(--foreground);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Code */
+
+pre,
+code {
+  font-family: "JetBrains Mono Medium";
+  font-size: 95%;
+}
+
+/* Background */
+.chroma {
+  background-color: var(--background);
+}
+
+/* LineTableTD */
+.chroma .lntd {
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+
+/* LineTable */
+.chroma .lntable {
+  border-spacing: 0;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  overflow: auto;
+  display: block;
+}
+
+/* LineHighlight */
+.chroma .hl {
+  display: block;
+  width: 100%;
+  background-color: #ffffcc
+}
+
+/* LineNumbersTable */
+.chroma .lnt {
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: var(--lighter);
+}
+
+/* LineNumbers */
+.chroma .ln {
+  margin-right: 0.4em;
+  padding: 0 0.4em 0 0.4em;
+  color: var(--lighter);
+}
+
+/* Keyword */
+.chroma .k {
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/* KeywordConstant */
+.chroma .kc {
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/* KeywordDeclaration */
+.chroma .kd {
+  font-weight: bold;
+  font-style: italic;
+  text-decoration: underline
+}
+
+/* KeywordNamespace */
+.chroma .kn {
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/* KeywordPseudo */
+.chroma .kp {
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/* KeywordReserved */
+.chroma .kr {
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/* KeywordType */
+.chroma .kt {
+  font-weight: bold;
+  text-decoration: underline
+}
+
+/* NameBuiltin */
+.chroma .nb {
+  font-weight: bold;
+  font-style: italic
+}
+
+/* NameBuiltinPseudo */
+.chroma .bp {
+  font-weight: bold;
+  font-style: italic
+}
+
+/* NameClass */
+.chroma .nc {
+  color: var(--lighter);
+  font-weight: bold;
+  font-style: italic
+}
+
+/* NameConstant */
+.chroma .no {
+  color: var(--lighter);
+  font-weight: bold;
+  font-style: italic
+}
+
+/* NameFunction */
+.chroma .nf {
+  color: var(--lighter);
+  font-weight: bold;
+  font-style: italic
+}
+
+/* NameNamespace */
+.chroma .nn {
+  color: var(--lighter);
+  font-weight: bold;
+  font-style: italic
+}
+
+/* NameVariable */
+.chroma .nv {
+  color: var(--lighter);
+  font-weight: bold;
+  font-style: italic
+}
+
+/* LiteralString */
+.chroma .s {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringAffix */
+.chroma .sa {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringBacktick */
+.chroma .sb {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringChar */
+.chroma .sc {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringDelimiter */
+.chroma .dl {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringDoc */
+.chroma .sd {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringDouble */
+.chroma .s2 {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringEscape */
+.chroma .se {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringHeredoc */
+.chroma .sh {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringInterpol */
+.chroma .si {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringOther */
+.chroma .sx {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringRegex */
+.chroma .sr {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringSingle */
+.chroma .s1 {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* LiteralStringSymbol */
+.chroma .ss {
+  color: var(--lighter);
+  font-style: italic
+}
+
+/* OperatorWord */
+.chroma .ow {
+  font-weight: bold
+}
+
+/* Comment */
+.chroma .c {
+  color: #888888;
+  font-style: italic
+}
+
+/* CommentHashbang */
+.chroma .ch {
+  color: #888888;
+  font-style: italic
+}
+
+/* CommentMultiline */
+.chroma .cm {
+  color: #888888;
+  font-style: italic
+}
+
+/* CommentSingle */
+.chroma .c1 {
+  color: #888888;
+  font-style: italic
+}
+
+/* CommentSpecial */
+.chroma .cs {
+  color: #888888;
+  font-weight: bold
+}
+
+/* CommentPreproc */
+.chroma .cp {
+  color: #888888;
+  font-weight: bold
+}
+
+/* CommentPreprocFile */
+.chroma .cpf {
+  color: #888888;
+  font-weight: bold
+}
+
+/* Footer */
+
+footer {
+  padding-top: 4em;
+  font-size: 20px;
+  color: var(--lighter);
+}
