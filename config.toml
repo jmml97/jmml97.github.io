@@ -1,0 +1,19 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'José María Martín Luque'
+theme = 'jmml'
+paginate = 10
+
+[params]
+  author = "José María Martín Luque"
+  description = "José María Martín Luque's personal website"
+  mainSections = ["posts"]
+
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
+
+[markup]
+  [markup.highlight]
+    style = "algol"
+    lineNos = true
+    noClasses = false

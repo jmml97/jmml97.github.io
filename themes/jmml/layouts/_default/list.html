@@ -1,0 +1,42 @@
+{{ define "main" }}
+<main>
+  {{ if or .Title .Content }}
+  <div>
+    {{ with .Title }}<h2>{{ . }}</h2>{{ end }}
+    {{ with .Content }}<div>{{ . }}</div>{{ end }}
+  </div>
+  {{ end }}
+
+  <table>
+    <tr>
+      <th>Date</th>
+      <th>Post title</th>
+    </tr>
+    {{ range .Pages }}
+    <tr>
+      <td>
+        {{.Date.Format "2006-01-02"}}
+      </td>
+      <td>
+        <a href="{{.Permalink}}">
+          {{.Title}}
+        </a>
+      </td>
+    </tr>
+    {{ end }}
+  </table>
+
+  <!-- <div class="posts-list">
+    {{ range .Pages }}
+    <p>
+      {{.Date.Format "2006-01-02"}}
+    </p>
+    <a href="{{.Permalink}}">
+      <p>
+        {{.Title}}
+      </p>
+    </a>
+    {{ end }}
+  </div> -->
+</main>
+{{ end }}

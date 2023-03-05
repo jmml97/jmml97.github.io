@@ -1,0 +1,16 @@
+<header>
+  {{ if .IsHome }}
+  <h1></h1>
+  {{ else }}
+  <h1><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  {{ end }}
+  {{ with .Site.Menus.main }}
+  <nav>
+    <p>
+      {{ range . }}
+      <a class="btn" href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </p>
+  </nav>
+  {{ end }}
+</header>
