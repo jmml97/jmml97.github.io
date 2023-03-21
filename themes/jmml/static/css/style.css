@@ -269,8 +269,26 @@ article time {
 .btn:hover {
   background: var(--foreground);
   color: var(--background);
+  fill: var(--background);
+  }
+  
+  .btn .icon,
+  .btn .text {
+    vertical-align: middle;
+    display: inline-block;
+  }
+  
+  .btn .icon-left {
+    padding-right: .5em;
 }
 
+.btn .icon-right {
+  padding-left: .5em;
+}
+
+.btn .icon svg {
+  display: block;
+}
 /* Images and figures */
 
 img {
