@@ -1,3 +1,25 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Plein-Variable';
+  src: url('../fonts/Plein-Variable.woff2') format('woff2'),
+    url('../fonts/Plein-Variable.woff') format('woff'),
+    url('../fonts/Plein-Variable.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Plein-VariableItalic';
+  src: url('../fonts/Plein-VariableItalic.woff2') format('woff2'),
+    url('../fonts/Plein-VariableItalic.woff') format('woff'),
+    url('../fonts/Plein-VariableItalic.ttf') format('truetype');
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: italic;
+}
 /* Color variables for light and dark */
 
 html {
@@ -44,7 +66,7 @@ html {
 }
 body {
   /* System font stack */
-  font-family: Inter, Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: Plein-Variable, Inter, Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
   font-size: 18px;
 
