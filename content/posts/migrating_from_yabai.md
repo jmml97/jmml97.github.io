@@ -5,14 +5,15 @@ date: 2023-08-06
 
 I have been using [yabai](https://github.com/koekeishiya/yabai/) for some time as my chosen tiling window manager on macOS.
 It works well and has nice features, such as disabling transition animations between desktops.
-However, some of these features are implemented in a clever but hackish way and require partially disabling System Integrity Protection (SIP):
+However, some of these features are implemented in a clever but hackish way and [require partially disabling System Integrity Protection (SIP)](https://github.com/koekeishiya/yabai/wiki/Disabling-System-Integrity-Protection):
 
 > yabai can be installed via Homebrew from a custom tap.
 > It does, however, require you to partially disable System Integrity Protection ("rootless"), because it controls windows by acting through Dock.app — which is the sole owner of the main connection to the window server.
 
-Disabling SIP has consequences, such as the inability to run iOS and iPadOS apps on macOS. Additionally, this approach may break with future macOS updates [like Sonoma](https://github.com/koekeishiya/yabai/issues/1772).
+Disabling SIP has consequences, such as the inability to run iOS and iPadOS apps on macOS.
+Additionally, this approach may break with future macOS updates [like Sonoma](https://github.com/koekeishiya/yabai/issues/1772).
 
-Due to these limitations, I decided to switch from yabai to [Amethyst](https://github.com/ianyh/Amethyst/). Amethyst is another tiling window manager for macOS.
+Due to these limitations, I decided to switch from yabai to [Amethyst](https://github.com/ianyh/Amethyst/), another tiling window manager for macOS.
 While it has a more limited feature set compared to yabai, all of its features work without disabling SIP.
 
 Ultimately, I realized that the features offered by Amethyst are similar to what yabai does when SIP is disabled. Therefore, I could have continued using yabai. Well, I suppose change is good!
