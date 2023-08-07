@@ -64,6 +64,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   /* System font stack */
   font-family: Plein-Variable, Inter, Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -73,13 +74,19 @@ body {
   /* Position content on screen and setup font size */
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
 }
 
 body {
   padding-top: 3em;
 }
 
+.body-narrow {
+  max-width: 600px;
+}
+
+.body-wide {
+  max-width: 90%;
+}
 body p {
   line-height: 36px;
 }
@@ -313,10 +320,11 @@ article time {
 }
 /* Images and figures */
 
-img {
+/* img {
   width: 100%;
 }
 
+*/
 .img-card {
   display: block;
   height: auto;
@@ -659,10 +667,6 @@ footer {
   color: var(--lighter);
 }
 /* Photo gallery things */
-
-@import "../jslibs/photoswipe/dist/photoswipe.css";
-@import "../jslibs/photoswipe-dynamic-caption-plugin/photoswipe-dynamic-caption-plugin.css";
-@import "../jslibs/flickr-justified-gallery/dist/fjGallery.css";
 
 html.dark {
   color-scheme: dark;
