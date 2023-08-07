@@ -88,7 +88,7 @@ body {
   max-width: 90%;
 }
 body p {
-  line-height: 36px;
+  line-height: 30px;
 }
 
 /* Adjust padding and font size on mobile */
@@ -688,4 +688,37 @@ html.dark {
 
 img.lazyload:not([src]) {
   visibility: hidden;
+}
+.gallery-text {
+  margin: auto;
+}
+
+.gallery-text h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.album-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 10px;
+}
+
+.album {
+  border: 0.08333rem solid var(--border);
+  /* border-top: 2px dotted var(--dotted); */
+  border-top: none;
+  border-left: 4px solid var(--lighter);
+  background: var(--background);
+  box-shadow: 2px 2px var(--shadow);
+}
+
+.album-info {
+  text-align: center;
+}
+
+.album-grid a {
+  color: var(--foreground);
+  text-decoration: none;
 }
