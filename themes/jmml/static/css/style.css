@@ -703,6 +703,10 @@ img.lazyload:not([src]) {
   text-align: center;
 }
 
+.gallery-text img {
+  margin: auto;
+  display: block;
+}
 .album-grid {
   display: grid;
   grid-auto-flow: row;
