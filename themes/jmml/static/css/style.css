@@ -694,7 +694,9 @@ html.dark {
 img.lazyload:not([src]) {
   visibility: hidden;
 }
-.gallery-text {
+.gallery-text p,
+h2 {
+  max-width: 600px;
   margin: auto;
 }
 
@@ -706,6 +708,11 @@ img.lazyload:not([src]) {
 .gallery-text img {
   margin: auto;
   display: block;
+}
+.fj-gallery,
+.gallery-text>img {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 .album-grid {
   display: grid;
