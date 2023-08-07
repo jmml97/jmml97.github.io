@@ -10,7 +10,7 @@
       <a href="{{ .RelPermalink }}" class="album" title="{{ .Title }}">
         <div class="h-100">
           <div class="w-full overflow-hidden rounded-2xl"
-            style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}; width: 100%">
+            style="background-color: {{ $color }}; aspect-ratio: {{ $thumbnail.Width }} / {{ $thumbnail.Height }}; height: 100%">
             <img class="lazyload aspect-[3/2] w-full" style="width: 100%" data-src="{{ $thumbnail.RelPermalink }}"
               alt="{{ .Title }}" />
           </div>
