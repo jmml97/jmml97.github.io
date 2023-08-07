@@ -1,5 +1,4 @@
-<div>
-  <div class="fj-gallery" style="visibility: hidden; height: 650px;">
+<div class="fj-gallery" style="visibility: hidden; height: 650px;">
     {{ $regex := (.Get 0) }}
     {{ $photos := sort (.Page.Resources.Match $regex ) }}
     {{ range $index, $original := $photos }}
@@ -39,5 +38,4 @@
     </a>
     {{ end }}
     {{ end }}
-  </div>
 </div>

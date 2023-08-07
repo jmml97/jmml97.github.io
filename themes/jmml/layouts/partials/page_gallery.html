@@ -1,9 +1,9 @@
-<div class="body-narrow gallery-text">
+<div class="gallery-text">
   <h2>{{ .Title }}</h2>
   {{ .Content }}
 </div>
 
-<div>
+
   <div class="fj-gallery" style="visibility: hidden; height: 650px;">
     {{ $photos := sort (.Resources.ByType "image") (index .Params "sort_by" | default "Name") (.Params.sort_order | default "asc") }}
     {{ range $index, $original := $photos }}
@@ -68,4 +68,3 @@
       {{ end }}
     {{ end }}
   </div>
-</div>
