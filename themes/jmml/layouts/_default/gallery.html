@@ -1,3 +1,10 @@
 {{ define "main" }}
-{{- partial "page_gallery.html" . -}}
+<div class="gallery-text">
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+</div>
+
+{{ $photos := sort (.Resources.ByType "image") (index .Params "sort_by" | default "Name") (.Params.sort_order | default
+"asc") }}
+{{ partial "gallery.html" (dict "Photos" $photos) }}
 {{ end }}
