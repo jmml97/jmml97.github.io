@@ -9,7 +9,11 @@
   <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
 
   {{ if or (eq .Layout "gallery") (eq .Layout "albums") (eq .Layout "gallery_manual") }}
-  {{- partial "head_gallery.html" . -}}
+  {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" true) | resources.Fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+  {{ $cssFiles := resources.Match "jslibs/**/*.css" }}
+  {{ $concatenatedCSS := $cssFiles | resources.Concat "styles.css" }}
+  <link rel="stylesheet" href="{{ $concatenatedCSS.Permalink }}">
   {{ end }}
 
   {{ with .Params.math }}
