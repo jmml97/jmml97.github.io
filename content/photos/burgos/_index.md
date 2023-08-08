@@ -1,5 +1,5 @@
 ---
-layout: gallery
+layout: gallery_manual
 title: Burgos
 date: 2023-08-07
 ---

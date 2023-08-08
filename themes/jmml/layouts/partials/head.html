@@ -8,7 +8,7 @@
 
   <link rel="stylesheet" href='{{ "css/style.css" | relURL }}'>
 
-  {{ if or (eq .Layout "gallery") (eq .Layout "gallery_list") }}
+  {{ if or (eq .Layout "gallery") (eq .Layout "gallery_list") (eq .Layout "gallery_manual") }}
   {{- partial "head_gallery.html" . -}}
   {{ end }}
 
