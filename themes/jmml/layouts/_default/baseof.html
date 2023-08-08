@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    {{ if or (eq .Layout "gallery") (eq .Layout "gallery_list") (eq .Layout "gallery_manual") }}
+    {{ if or (eq .Layout "gallery") (eq .Layout "albums") (eq .Layout "gallery_manual") }}
     
     <body class="body-wide">
         {{ else }}

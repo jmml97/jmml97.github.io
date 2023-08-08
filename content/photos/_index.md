@@ -1,5 +1,5 @@
 ---
-layout: gallery_list
+layout: albums
 title: Photos
 menu: main
 ---
