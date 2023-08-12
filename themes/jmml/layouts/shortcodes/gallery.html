@@ -1,0 +1,3 @@
+{{ $regex := (.Get 0) }}
+{{ $photos := sort (.Page.Resources.Match $regex ) }}
+{{ partial "gallery.html" (dict "Photos" $photos) }}

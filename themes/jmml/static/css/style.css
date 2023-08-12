@@ -64,6 +64,7 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   /* System font stack */
   font-family: Plein-Variable, Inter, Roboto, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
@@ -73,15 +74,21 @@ body {
   /* Position content on screen and setup font size */
   margin-left: auto;
   margin-right: auto;
-  max-width: 600px;
 }
 
 body {
   padding-top: 3em;
 }
 
+.body-narrow {
+  max-width: 600px;
+}
+
+.body-wide {
+  max-width: 90%;
+}
 body p {
-  line-height: 36px;
+  line-height: 30px;
 }
 
 /* Adjust padding and font size on mobile */
@@ -146,6 +153,11 @@ header nav {
   }
 }
 
+@media (max-width: 360px) {
+  header nav p a {
+    margin-bottom: .5em;
+  }
+}
 
 header nav p {
   margin: 0;
@@ -313,10 +325,11 @@ article time {
 }
 /* Images and figures */
 
-img {
+/* img {
   width: 100%;
 }
 
+*/
 .img-card {
   display: block;
   height: auto;
@@ -657,4 +670,74 @@ footer {
   padding-top: 4em;
   font-size: 20px;
   color: var(--lighter);
+}
+/* Photo gallery things */
+
+html.dark {
+  color-scheme: dark;
+}
+
+[x-cloak] {
+  display: none !important;
+}
+
+.lazyload,
+.lazyloading {
+  opacity: 0;
+}
+
+.lazyloaded {
+  opacity: 1;
+  transition: opacity 300ms;
+}
+
+img.lazyload:not([src]) {
+  visibility: hidden;
+}
+.gallery-text p,
+h2 {
+  max-width: 600px;
+  margin: auto;
+}
+
+.gallery-text h2 {
+  font-size: 3em;
+  text-align: center;
+}
+
+.gallery-text img {
+  margin: auto;
+  display: block;
+}
+.fj-gallery,
+.gallery-text>img {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.album-grid {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+  grid-gap: 10px;
+}
+
+.album {
+  border: 0.08333rem solid var(--border);
+  /* border-top: 2px dotted var(--dotted); */
+  border-top: none;
+  border-left: 4px solid var(--lighter);
+  background: var(--background);
+  box-shadow: 2px 2px var(--shadow);
+}
+
+.album-info {
+  text-align: center;
+}
+
+.album-grid a {
+  color: var(--foreground);
+  text-decoration: none;
 }

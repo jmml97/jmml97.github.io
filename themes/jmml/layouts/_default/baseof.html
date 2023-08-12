@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
     {{- partial "head.html" . -}}
-    <body>
+    {{ if or (eq .Layout "gallery") (eq .Layout "albums") (eq .Layout "gallery_manual") }}
+    
+    <body class="body-wide">
+        {{ else }}
+    
+        <body class="body-narrow">
+            {{ end }}
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
