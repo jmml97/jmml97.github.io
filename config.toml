@@ -4,6 +4,8 @@ title = 'José María Martín Luque'
 theme = 'jmml'
 paginate = 10
 
+timeout = 600000
+
 [params]
   author = "José María Martín Luque"
   description = "José María Martín Luque's personal website"
