@@ -1,7 +1,7 @@
 ---
 layout: gallery_manual
 title: Valladolid
-date: 2023-08-13
+date: 2023-08-09
 ---
 
 Valladolid is the capital of the Valladolid Province, in the Castilla y León Autonomous Community of Spain.
